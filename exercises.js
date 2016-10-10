@@ -40,9 +40,33 @@ function expect(target) {
 //
 // Only add code to *THIS* section!
 
-// ????????
-// ????????
-// ????????
+function Dog(config){
+  config = config || {};
+
+  this.status = 'normal';
+  this.color = config.color;
+
+  if(config.hungry == undefined){
+    this.hungry = true;
+  } else{
+    this.hungry = config.hungry;
+  }
+}
+
+function Human(){
+
+
+}
+
+Human.prototype.pet = function(dog){
+  dog.status = 'happy';
+
+};
+
+Human.prototype.feed = function(dog){
+  dog.hungry = false;
+}
+
 
 
 //        __
