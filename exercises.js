@@ -53,8 +53,13 @@ function Dog(config){
   }
 }
 
-function Human(){
-
+function Human(config){
+  config = config || {};
+  if(config.cool == undefined){
+    this.cool = false;
+  } else{
+    this.cool = config.cool;
+  }
 
 }
 
